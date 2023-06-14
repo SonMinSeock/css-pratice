@@ -8,23 +8,23 @@ const hambugerToggle = document.querySelector(".main-header .toggle-button");
 const mobileNav = document.querySelector(".mobile-nav");
 
 function openModal() {
-  backdrop.style.display = "block";
-  modal.style.display = "block";
+  backdrop.classList.add("open");
+  modal.classList.add("open");
 }
 
 function closeModal() {
-  backdrop.style.display = "none";
-  modal.style.display = "none";
+  backdrop.classList.remove("open");
+  modal.classList.remove("open");
 }
 
 function openMenu() {
-  mobileNav.style.display = "block";
-  backdrop.style.display = "block";
+  mobileNav.classList.add("open");
+  backdrop.classList.add("open");
 }
 
 function closeMenu() {
-  mobileNav.style.display = "none";
-  backdrop.style.display = "none";
+  mobileNav.classList.remove("open");
+  backdrop.classList.remove("open");
 }
 
 selectPlanButtons.forEach((selectPlanButton) =>
