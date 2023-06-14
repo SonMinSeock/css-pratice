@@ -34,13 +34,17 @@ selectPlanButtons.forEach((selectPlanButton) =>
 );
 
 backdrop.addEventListener("click", function () {
-  closeModal();
+  if (modal) {
+    closeModal();
+  }
   closeMenu();
 });
 
-modalNoButton.addEventListener("click", () => {
-  closeModal();
-});
+if (modalNoButton) {
+  modalNoButton.addEventListener("click", () => {
+    closeModal();
+  });
+}
 
 hambugerToggle.addEventListener("click", () => {
   openMenu();
