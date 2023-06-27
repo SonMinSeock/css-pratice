@@ -20,6 +20,7 @@ body {
 
 .main-header {
   width: 100%;
+  height: 4rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,7 +39,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
-  height: 1.5rem;
+  height: 2.5rem;
   /* width: 20px; */
   display: inline-block;
   vertical-align: middle;
@@ -50,10 +51,7 @@ body {
 }
 
 .main-nav {
-  display: inline-block;
-  text-align: right;
-  width: calc(100% - 122px);
-  vertical-align: middle;
+  display: none;
 }
 
 .main-nav__items {
@@ -112,8 +110,7 @@ body {
 }
 
 .main-footer__link {
-  display: inline-block;
-  margin: 0 1rem;
+  margin: 1rem 0;
 }
 
 .main-footer__link a {
@@ -199,4 +196,23 @@ body {
 
 .open {
   display: block;
+}
+
+@media (min-width: 40rem) {
+  .main-header {
+    vertical-align: middle;
+  }
+  .main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 122px);
+    vertical-align: middle;
+  }
+  .toggle-button {
+    display: none;
+  }
+  .main-footer__link {
+    display: inline-block;
+    margin: 0 1rem;
+  }
 }
